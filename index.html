@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>清水先生の算命学鑑定｜無料 宿命診断</title>
+<meta name="description" content="算命学で強みを発掘するプロデューサー・清水先生。生年月日から本質の星と天中殺がわかる無料の簡易診断つき。鑑定は口コミ・ご紹介のみで受付。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="清水先生の算命学鑑定｜無料 宿命診断">
+<meta property="og:description" content="生年月日から本質の星と天中殺がわかる無料の簡易診断つき。鑑定は口コミ・ご紹介のみで受付。">
+<meta property="og:url" content="https://matuoka1981-design.github.io/shimizu-sanmeigaku/">
+<meta property="og:image" content="https://matuoka1981-design.github.io/shimizu-sanmeigaku/img/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23b4432e'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23f4e9dc' font-family='serif' font-weight='700'%3E清%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0b1020;
+  --night-2:#111830;
+  --night-3:#18213d;
+  --line:rgba(200,167,106,.22);
+  --line-soft:rgba(236,230,218,.09);
+  --gold:#c8a76a;
+  --gold-hi:#e6cd96;
+  --gold-lo:#8f7442;
+  --shu:#b4432e;
+  --text:#ece6da;
+  --text-2:#b3ad9f;
+  --text-3:#9a9484;
+  --washi:#e8e4da;
+  --washi-ink:#1a1e2c;
+  --washi-2:#55575e;
+  --gut:clamp(16px,4vw,56px);
+  --max:1240px;
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:var(--gold-lo) var(--night)}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.95;letter-spacing:.03em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:var(--night)}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--night)}
+::-webkit-scrollbar-thumb{background:var(--gold-lo);border-radius:10px;border:3px solid var(--night)}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.3em;text-decoration-thickness:1px}
+h1,h2,h3{margin:0;font-weight:700;text-wrap:balance;word-break:keep-all;overflow-wrap:anywhere}
+p{margin:0}
+.wrap{width:min(var(--max),100% - var(--gut)*2);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* dotted board ground */
+.dots{background-image:radial-gradient(rgba(200,167,106,.16) 1px,transparent 1.4px);background-size:28px 28px}
+
+/* ── nav ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:stretch;justify-content:space-between;pointer-events:none;transition:background .4s}
+.nav.solid{background:rgba(11,16,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.mark{pointer-events:auto;display:flex;align-items:center;gap:14px;padding:15px var(--gut);text-decoration:none}
+.mark .seal{width:38px;height:38px;border-radius:4px;background:var(--shu);color:#f4e9dc;display:grid;place-items:center;font-family:var(--mincho);font-weight:800;font-size:13px;line-height:1;letter-spacing:0;box-shadow:0 4px 12px -4px rgba(0,0,0,.6)}
+.mark b{font-family:var(--mincho);font-weight:700;font-size:15px;letter-spacing:.12em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.nav-links{pointer-events:auto;display:flex;align-items:center;gap:28px;font-size:13px;padding-right:28px;margin-left:auto}
+.nav-links a{text-decoration:none;color:var(--text-2);text-shadow:0 1px 6px rgba(0,0,0,.7);transition:color .3s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{pointer-events:auto;display:flex;align-items:center;gap:14px;padding:0 30px;min-height:68px;background:var(--gold);color:var(--night);font-weight:700;font-size:14px;letter-spacing:.1em;text-decoration:none;transition:background .3s var(--ease)}
+.nav-cta:hover{background:var(--gold-hi)}
+.nav-cta svg{width:18px;height:18px;transition:transform .4s var(--ease)}
+.nav-cta:hover svg{transform:translateX(4px)}
+@media (max-width:1080px){.nav-links{display:none}}
+@media (max-width:640px){.nav-cta{padding:0 16px;min-height:58px;font-size:13px;gap:8px}.mark{padding:10px var(--gut);gap:10px}.mark b{font-size:12.5px;letter-spacing:.06em}.mark .seal{width:32px;height:32px;font-size:11px}}
+
+/* ── tile reveal (the board flips away) ── */
+.tiles{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols,10),1fr);grid-template-rows:repeat(var(--rows,6),1fr);z-index:3;pointer-events:none;gap:1px}
+.tiles i{background:var(--night);display:grid;place-items:center;font-family:var(--mincho);font-style:normal;font-weight:700;color:rgba(200,167,106,.32);font-size:clamp(10px,1.1vw,15px);transition:opacity .7s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+.revealed .tiles i{opacity:0;transform:scale(.55)}
+
+/* ── hero ── */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);overflow:hidden}
+.hero-copy{position:relative;z-index:4;display:flex;flex-direction:column;justify-content:flex-end;padding:140px var(--gut) clamp(48px,7vw,96px)}
+.hero h1{font-family:var(--mincho);font-weight:800;font-size:clamp(2.6rem,6vw,5.6rem);line-height:1.24;letter-spacing:.02em}
+.hero h1 .g{color:var(--gold)}
+.hero-lede{margin-top:32px;max-width:30em;color:var(--text-2);font-size:clamp(15px,1.2vw,17px)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 30px;border:1px solid var(--gold);color:var(--text);font:700 15px/1.3 var(--sans);letter-spacing:.1em;text-decoration:none;cursor:pointer;background:transparent;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s}
+.btn:hover{background:rgba(200,167,106,.12)}
+.btn.solid{background:var(--gold);color:var(--night)}
+.btn.solid:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.btn svg{width:18px;height:18px}
+.btn[aria-disabled="true"]{border-color:var(--text-3);color:var(--text-3);cursor:not-allowed;background:transparent}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--text-2)}
+.hero-meta b{color:var(--gold);font-weight:700;margin-right:10px}
+.hero-photo{position:relative;margin:0}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:saturate(.82) contrast(1.05) brightness(.92)}
+.hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--night) 0%,rgba(11,16,32,.35) 22%,transparent 50%),linear-gradient(0deg,rgba(11,16,32,.85) 0%,transparent 40%)}
+.hero-photo figcaption{position:absolute;right:var(--gut);bottom:clamp(48px,7vw,96px);z-index:4;text-align:right;font-family:var(--mincho);font-size:14px;line-height:1.7;color:var(--text)}
+.hero-photo figcaption b{display:block;font-size:clamp(26px,2.6vw,34px);font-weight:800;letter-spacing:.16em}
+.hero-photo figcaption span{color:var(--gold)}
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-photo{order:-1;height:min(118vw,620px)}
+  .hero-photo::after{background:linear-gradient(0deg,var(--night) 2%,rgba(11,16,32,.15) 45%,rgba(11,16,32,.5) 100%)}
+  .hero-copy{padding-top:0;margin-top:-72px}
+  .hero-photo figcaption{bottom:auto;top:78px;font-size:12px}
+  .hero-photo figcaption b{font-size:24px}
+}
+
+/* ── statement ── */
+.statement{padding:clamp(96px,14vw,200px) 0;border-top:1px solid var(--line-soft)}
+.statement p{font-family:var(--mincho);font-weight:700;font-size:clamp(1.5rem,3.4vw,3rem);line-height:1.8;max-width:22em}
+.statement p .dim{color:var(--text-3)}
+.statement p .g{color:var(--gold)}
+.statement cite{display:block;margin-top:40px;font-style:normal;color:var(--text-2);font-size:14px}
+.word{opacity:.12;filter:blur(6px);transition:opacity 1s var(--ease),filter 1s var(--ease);transition-delay:var(--d,0ms)}
+.lit .word{opacity:1;filter:none}
+
+/* ── section heads ── */
+.sec{padding:clamp(88px,12vw,160px) 0}
+.h2{font-family:var(--mincho);font-weight:800;font-size:clamp(1.9rem,4.4vw,3.6rem);line-height:1.38;letter-spacing:.02em}
+.h2 .g{color:var(--gold)}
+.lead{margin-top:26px;max-width:36em;color:var(--text-2);font-size:16.5px}
+
+/* ── diagnosis ── */
+.diag{background:var(--night-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.diag-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,96px);align-items:start}
+.form{margin-top:44px;display:grid;gap:18px}
+.form fieldset{border:0;margin:0;padding:0;min-width:0}
+.form legend{font-weight:700;font-size:14px;color:var(--gold);letter-spacing:.12em;margin-bottom:12px;padding:0}
+.selects{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px}
+.sel{position:relative}
+.sel select{appearance:none;width:100%;min-height:60px;padding:0 54px 0 16px;background:var(--night);color:var(--text);border:1px solid var(--line);border-radius:0;font:500 17px var(--sans);cursor:pointer;transition:border-color .3s}
+.sel select:hover{border-color:var(--gold-lo)}
+.sel select:focus-visible{outline:none;border-color:var(--gold-hi);box-shadow:0 0 0 1px var(--gold-hi)}
+.sel::after{content:"";position:absolute;right:16px;top:50%;width:7px;height:7px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.sel span[aria-hidden]{position:absolute;right:34px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--text-3);pointer-events:none}
+.form .btn{width:100%}
+.err{min-height:1.6em;color:#e9967f;font-size:14px}
+.err:empty{min-height:0}
+.fine{font-size:12.5px;color:var(--text-3);line-height:1.8}
+
+.board-wrap{position:relative}
+.board{display:grid;grid-template-columns:repeat(10,minmax(0,1fr)) auto;gap:4px;font-family:var(--mincho)}
+.board .k{aspect-ratio:1;display:grid;place-items:center;background:var(--night);border:1px solid var(--line-soft);color:var(--text-3);font-size:clamp(11px,1.15vw,16px);font-weight:700;letter-spacing:0;line-height:1.05;text-align:center;transition:background .5s var(--ease),color .5s,border-color .5s,transform .6s var(--ease),box-shadow .6s}
+.board .k b{display:block;font-weight:700}
+.board .tc{display:flex;align-items:center;padding-left:10px;font-family:var(--sans);font-size:11.5px;color:var(--text-3);white-space:nowrap;transition:color .5s}
+.board .row-on{border-color:rgba(200,167,106,.4);color:var(--text)}
+.board .tc.row-on{color:var(--gold)}
+.board .me{animation:none!important;background:var(--gold);color:var(--night);border-color:var(--gold-hi);transform:scale(1.22);z-index:2;box-shadow:0 12px 26px -8px rgba(0,0,0,.75)}
+.board.scan .k{animation:scan 1.1s var(--ease) both;animation-delay:var(--d)}
+@keyframes scan{0%{background:var(--night)}35%{background:rgba(200,167,106,.5);color:var(--night)}100%{background:var(--night)}}
+.board-cap{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-size:12.5px;color:var(--text-3)}
+
+.result{margin-top:clamp(56px,8vw,96px);display:none;scroll-margin-top:90px}
+.result.on{display:block}
+.res-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,56px);align-items:end;padding-bottom:36px;border-bottom:1px solid var(--line)}
+.res-glyph{font-family:var(--mincho);font-weight:800;font-size:clamp(6rem,13vw,10rem);line-height:.9;color:var(--gold);letter-spacing:0}
+.res-head h3{font-family:var(--mincho);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.35}
+.res-head p{margin-top:10px;color:var(--text-2)}
+.res-body{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.res-body section{padding:32px clamp(18px,2.4vw,36px) 8px 0}
+.res-body section + section{padding-left:clamp(18px,2.4vw,36px);border-left:1px solid var(--line-soft)}
+.res-body h4{margin:0 0 12px;font-size:14px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.res-body p{color:var(--text-2);font-size:15.5px}
+.res-body p b{color:var(--text);font-weight:700}
+.pillars{display:flex;gap:12px;margin-bottom:14px}
+.pillar{flex:1;border:1px solid var(--line);padding:12px 8px;text-align:center}
+.pillar small{display:block;font-size:11.5px;color:var(--text-3)}
+.pillar strong{font-family:var(--mincho);font-size:28px;font-weight:800;letter-spacing:.06em}
+.tenchu{margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);padding:clamp(24px,4vw,48px);background:var(--night);border:1px solid var(--line)}
+.tenchu h4{margin:0;word-break:keep-all;overflow-wrap:anywhere;font-family:var(--mincho);font-weight:800;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.5}
+.tenchu h4 .g{color:var(--gold)}
+.years{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.years span{border:1px solid var(--gold-lo);padding:6px 14px;font-size:14px;font-variant-numeric:tabular-nums}
+.years span.now{background:var(--shu);border-color:var(--shu);color:#f6ece0}
+.tenchu p{color:var(--text-2)}
+.tenchu p + p{margin-top:1em}
+.tenchu q{font-family:var(--mincho);font-weight:700;color:var(--text);quotes:"「" "」"}
+.res-cta{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:32px;border-top:1px solid var(--line)}
+.res-cta p{color:var(--text-2);max-width:38em}
+@media (max-width:960px){
+  .diag-grid{grid-template-columns:1fr}
+  .res-body{grid-template-columns:1fr}
+  .res-body section,.res-body section + section{padding:26px 0;border-left:0;border-bottom:1px solid var(--line-soft)}
+  .tenchu{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .board{gap:2px;grid-template-columns:repeat(10,minmax(0,1fr))}
+  .board .tc{display:none}
+  .board .k{font-size:10.5px}
+  .board-cap span:last-child{display:none}
+  .selects{grid-template-columns:1.3fr 1fr 1fr;gap:6px}
+  .sel select{padding:0 40px 0 12px;font-size:16px}
+  .sel span[aria-hidden]{right:28px}
+  .sel::after{right:12px}
+}
+
+/* ── principles (washi) ── */
+.washi{background:var(--washi);color:var(--washi-ink)}
+.washi .h2 .g{color:#7d5f25}
+.washi .lead{color:var(--washi-2)}
+.princ{list-style:none;margin:72px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(26,30,44,.25)}
+.princ li{padding:40px clamp(18px,2.8vw,44px) 0 0}
+.princ li + li{padding-left:clamp(18px,2.8vw,44px);border-left:1px solid rgba(26,30,44,.15)}
+.princ .glyph{font-family:var(--mincho);font-weight:800;font-size:clamp(4.5rem,8vw,7rem);line-height:1;color:var(--washi-ink)}
+.princ h3{font-family:var(--mincho);font-weight:800;font-size:clamp(1.25rem,1.8vw,1.55rem);line-height:1.5;margin:22px 0 14px}
+.princ p{color:var(--washi-2);font-size:15.5px}
+.princ blockquote{margin:22px 0 0;padding-top:16px;border-top:1px solid rgba(26,30,44,.15);font-family:var(--mincho);font-weight:700;font-size:15px;color:#6e521c;line-height:1.8}
+@media (max-width:960px){.princ{grid-template-columns:1fr}.princ li,.princ li + li{padding:36px 0;border-left:0;border-bottom:1px solid rgba(26,30,44,.15)}}
+
+/* ── voices ── */
+.reel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);margin-top:64px}
+.clip{margin:0}
+.clip-frame{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--night-3);border:1px solid var(--line-soft)}
+.clip video{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.clip button{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(0deg,rgba(11,16,32,.75),transparent 50%);display:flex;align-items:flex-end;padding:18px;color:var(--text)}
+.clip button span{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.1em}
+.clip button i{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;transition:background .35s var(--ease),color .35s}
+.clip button:hover i{background:var(--gold);color:var(--night)}
+.clip button svg{width:14px;height:14px}
+.clip.playing button{display:none}
+.clip figcaption{margin-top:16px;font-family:var(--mincho);font-weight:700;font-size:16px;line-height:1.6}
+@media (max-width:960px){.reel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ── uses ── */
+.uses{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,96px)}
+.use{display:grid;grid-template-columns:11em 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line-soft)}
+.use:first-child{border-top:1px solid var(--line)}
+.use dt{font-family:var(--mincho);font-weight:800;font-size:19px;color:var(--gold)}
+.use dd{margin:0;color:var(--text-2)}
+.use dd b{color:var(--text)}
+@media (max-width:960px){.uses{grid-template-columns:1fr}.use{grid-template-columns:1fr;gap:6px}}
+
+/* ── profile ── */
+.profile{background:var(--night-2);border-top:1px solid var(--line)}
+.prof-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,7vw,112px);align-items:center}
+.prof-photo{position:relative;margin:0;aspect-ratio:4/5;overflow:hidden}
+.prof-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 14%;filter:saturate(.85) contrast(1.04)}
+.prof-name{font-family:var(--mincho);font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:.2em;line-height:1.2}
+.prof-role{margin-top:12px;color:var(--gold);font-weight:700;letter-spacing:.12em;font-size:14px}
+.prof-text{margin-top:36px;color:var(--text-2)}
+.prof-text p + p{margin-top:1.1em}
+.facts{display:grid;grid-template-columns:auto 1fr;margin:36px 0 0;border-top:1px solid var(--line)}
+.facts dt,.facts dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:15px}
+.facts dt{color:var(--gold);font-weight:700;padding-right:32px;letter-spacing:.08em}
+.facts dd{color:var(--text)}
+@media (max-width:960px){.prof-grid{grid-template-columns:1fr}.prof-photo{max-width:460px}}
+
+/* ── terms ── */
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:56px}
+.term{border:1px solid var(--line);padding:clamp(24px,3vw,40px)}
+.term h3{font-family:var(--mincho);font-weight:800;font-size:22px;margin-bottom:18px}
+.term dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.term dt,.term dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:15px}
+.term dt{color:var(--gold);font-weight:700;padding-right:28px}
+.term .tbd{color:var(--text-3)}
+.term ul{margin:0;padding-left:1.1em;color:var(--text-2);font-size:15px}
+.term li + li{margin-top:.8em}
+.term li b{color:var(--text)}
+@media (max-width:960px){.terms{grid-template-columns:1fr}}
+
+/* ── close ── */
+.close{position:relative;overflow:hidden;padding:clamp(110px,15vw,210px) 0;text-align:center;border-top:1px solid var(--line)}
+.close .seal-big{width:88px;height:88px;margin:0 auto 40px;background:var(--shu);color:#f4e9dc;display:grid;place-items:center;font-family:var(--mincho);font-weight:800;font-size:24px;line-height:1.15;border-radius:6px;box-shadow:0 14px 30px -12px rgba(0,0,0,.7)}
+.close h2{font-family:var(--mincho);font-weight:800;font-size:clamp(2rem,5.2vw,4.4rem);line-height:1.4}
+.close .lead{margin:28px auto 0}
+.baton{list-style:none;margin:64px auto 0;padding:0;max-width:960px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));text-align:left;border-top:1px solid var(--line)}
+.baton li{padding:26px 24px 0 0}
+.baton li + li{padding-left:24px;border-left:1px solid var(--line-soft)}
+.baton b{display:block;font-family:var(--mincho);font-size:18px;font-weight:800;margin-bottom:6px}
+.baton b span{color:var(--gold);margin-right:10px}
+.baton p{color:var(--text-2);font-size:14.5px}
+.close-act{margin-top:64px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.close-act small{color:var(--text-3);font-size:13px}
+@media (max-width:760px){.baton{grid-template-columns:1fr}.baton li,.baton li + li{padding:22px 0;border-left:0;border-bottom:1px solid var(--line-soft)}}
+
+footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:13px;color:var(--text-3)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .tiles{display:none}
+  .word{opacity:1;filter:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="mark" href="#top" aria-label="清水先生の算命学鑑定 トップへ"><span class="seal" aria-hidden="true">清水</span><b>清水先生の算命学鑑定</b></a>
+  <nav class="nav-links" aria-label="ページ内">
+    <a href="#statement">考え方</a>
+    <a href="#principles">鑑定の流儀</a>
+    <a href="#voices">先生の言葉</a>
+    <a href="#profile">プロフィール</a>
+    <a href="#close">鑑定のお申し込み</a>
+  </nav>
+  <a class="nav-cta" href="#diagnosis">無料で宿命診断<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</header>
+
+<main id="top">
+<section class="hero dots" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title">生まれた日に、<br><span class="g">才能の種</span>は<br>蒔かれている。</h1>
+    <p class="hero-lede">算命学は、生年月日からその人が持つ星を読み解く学問です。清水先生は断定せず、言葉を聞き合いながら、あなた自身に鏡を向けます。眠っている強みに、自分で気づくために。</p>
+    <div class="hero-actions">
+      <a class="btn solid" href="#diagnosis">生年月日で無料診断する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="#principles">鑑定について知る</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>鑑定</b>算命学による個人鑑定</span>
+      <span><b>受付</b>口コミ・ご紹介のみ</span>
+    </div>
+  </div>
+  <figure class="hero-photo reveal" style="margin:0">
+    <img src="img/shimizu-600.jpg" alt="和室の座卓で手を組み、穏やかに語る清水先生" width="1080" height="1240" fetchpriority="high">
+    <div class="tiles" data-tiles style="--cols:6;--rows:8"></div>
+    <figcaption><span>算命学で強みを発掘するプロデューサー</span><b>清水先生</b></figcaption>
+  </figure>
+</section>
+
+<section id="statement" class="statement" aria-label="清水先生の考え方">
+  <div class="wrap">
+    <p class="words"><span class="dim">占いが当たるかどうかは、</span>扱う人の<span class="g">伝え方</span>で変わる。<span class="dim">だから僕は断定しない。</span>相手の言葉と表情から読み取り、<span class="g">ズレを整える</span>。それが精度を上げる、いちばんの方法です。</p>
+    <cite>— 清水先生（インタビューより要約）</cite>
+  </div>
+</section>
+
+<section id="diagnosis" class="sec diag" aria-labelledby="diag-title">
+  <div class="wrap">
+    <div class="diag-grid">
+      <div>
+        <h2 id="diag-title" class="h2">無料 宿命診断。<br><span class="g">あなたの星</span>を<br>のぞいてみる。</h2>
+        <p class="lead">生年月日を入れるだけで、算命学で「本質」をあらわす日干と、運気の“裏の時期”である天中殺がわかります。六十干支の盤の上で、あなたの生まれた日が光ります。</p>
+        <form class="form" id="diagForm" novalidate>
+          <fieldset>
+            <legend>生年月日</legend>
+            <div class="selects">
+              <label class="sel"><select id="y" aria-label="生まれた年" required></select><span aria-hidden="true">年</span></label>
+              <label class="sel"><select id="m" aria-label="生まれた月" required></select><span aria-hidden="true">月</span></label>
+              <label class="sel"><select id="d" aria-label="生まれた日" required></select><span aria-hidden="true">日</span></label>
+            </div>
+          </fieldset>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn solid" type="submit">星を読む<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="fine">入力した生年月日はこの画面の中だけで計算し、どこにも送信・保存しません。簡易版のため、生まれた時間や節入りの細かな違いは考慮していません。</p>
+        </form>
+      </div>
+      <div class="board-wrap">
+        <div class="board" id="board" role="img" aria-label="六十干支の盤。診断すると生まれた日の干支が光ります"></div>
+        <div class="board-cap"><span>六十干支の盤（1行＝1旬）</span><span>右端：その行の天中殺</span></div>
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <div class="res-head">
+        <div class="res-glyph" id="rGlyph">甲</div>
+        <div>
+          <h3 id="rTitle"></h3>
+          <p id="rSub"></p>
+        </div>
+      </div>
+      <div class="res-body">
+        <section>
+          <h4>あなたの命式（簡易）</h4>
+          <div class="pillars">
+            <div class="pillar"><small>生まれ年</small><strong id="rYear"></strong></div>
+            <div class="pillar"><small>生まれ日</small><strong id="rDay"></strong></div>
+          </div>
+          <p>生まれ日の干支の上の字「<b id="rStem"></b>」が、算命学で自分自身の本質をあらわす星です。</p>
+        </section>
+        <section>
+          <h4>才能の種</h4>
+          <p id="rSeed"></p>
+        </section>
+        <section>
+          <h4>水のあげ方</h4>
+          <p id="rWater"></p>
+        </section>
+      </div>
+      <div class="tenchu">
+        <div>
+          <h4 id="rTcTitle"></h4>
+          <div class="years" id="rYears"></div>
+        </div>
+        <div>
+          <p id="rTcNow"></p>
+          <p>天中殺は「何もしないほうがいい悪い時期」と恐れられがちです。清水先生はこれを<q>裏の自分が出る</q>時期と捉えます。表の自分では経験できないことをさせてもらえる。予定が狂うなら、ゆとりを持って過ごせばいい。回り道だから見える花や人がいる、という考え方です。</p>
+        </div>
+      </div>
+      <div class="res-cta">
+        <p>ここでわかるのは、命式のほんの入口です。才能の種がどこに埋まっているのか、いまの時期をどう過ごすか。清水先生の鑑定では、あなたの言葉を聞き合いながら一緒に読み解きます。</p>
+        <a class="btn solid" href="#close">鑑定の受け方を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="principles" class="sec washi" aria-labelledby="princ-title">
+  <div class="wrap">
+    <h2 id="princ-title" class="h2">寄り添うのではなく、<br><span class="g">伴走する</span>鑑定。</h2>
+    <p class="lead">清水先生の鑑定には、三つの流儀があります。どれも、師匠から学んだことを体験し、実践を重ねる中で見つけてきたものです。</p>
+    <ul class="princ">
+      <li>
+        <div class="glyph" aria-hidden="true">聞</div>
+        <h3>断定ではなく、聞き合い</h3>
+        <p>「あなたはこうですよね」とは言いません。「自分はこう思うけど、どうですか」と問いかけ、反応や言葉から読み取ります。受け取る言葉とのズレを整えるから、精度が上がります。</p>
+        <blockquote>「聞き合いっていうものをやってまして」</blockquote>
+      </li>
+      <li>
+        <div class="glyph" aria-hidden="true">鏡</div>
+        <h3>鏡を見せて、すり合わせる</h3>
+        <p>寄りすぎると、同じ立場になってしまう。だから伴走に近い距離で鏡を向けます。「そうじゃない」と感じる自分も、あなた自身。そこを一緒にすり合わせます。</p>
+        <blockquote>「あくまで僕は鏡を見せることしかしてないので」</blockquote>
+      </li>
+      <li>
+        <div class="glyph" aria-hidden="true">転</div>
+        <h3>悪い時期も、捉え方を変える</h3>
+        <p>「悪い時期があります」で終わらせては意味がない。大切なのは捉え方と、より良くしていくこと。どうアシストするかを、いつも頭に置いています。</p>
+        <blockquote>「要は捉え方の話であって、より良くなればいい話なので」</blockquote>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="voices" class="sec dots" aria-labelledby="voices-title">
+  <div class="wrap">
+    <h2 id="voices-title" class="h2">清水先生の言葉を、<br><span class="g">そのまま</span>聞く。</h2>
+    <p class="lead">インタビューから、考え方が伝わる一言を抜き出しました。タップすると音声つきで再生されます。</p>
+    <div class="reel">
+      <figure class="clip"><div class="clip-frame"><video src="img/mirror.mp4" poster="img/mirror-poster.jpg" preload="none" playsinline aria-label="鏡を見せる"></video><button type="button" aria-label="「鏡を見せる」を再生"><span><i><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></i>再生する</span></button></div><figcaption>寄りすぎず、鏡を見せる</figcaption></figure>
+      <figure class="clip"><div class="clip-frame"><video src="img/ura.mp4" poster="img/ura-poster.jpg" preload="none" playsinline aria-label="裏の自分"></video><button type="button" aria-label="「裏の自分」を再生"><span><i><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></i>再生する</span></button></div><figcaption>大殺界は“裏の自分”が出る時期</figcaption></figure>
+      <figure class="clip"><div class="clip-frame"><video src="img/tane.mp4" poster="img/tane-poster.jpg" preload="none" playsinline aria-label="才能の種"></video><button type="button" aria-label="「才能の種」を再生"><span><i><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></i>再生する</span></button></div><figcaption>才能の種に、水をあげる</figcaption></figure>
+      <figure class="clip"><div class="clip-frame"><video src="img/mawari.mp4" poster="img/mawari-poster.jpg" preload="none" playsinline aria-label="回り道"></video><button type="button" aria-label="「回り道」を再生"><span><i><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></i>再生する</span></button></div><figcaption>回り道だから見えるもの</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="uses-title" style="border-top:1px solid var(--line-soft)">
+  <div class="wrap uses">
+    <div>
+      <h2 id="uses-title" class="h2">人と関わる、<br><span class="g">あらゆる場面</span>に。</h2>
+      <p class="lead">算命学がいちばん機能するのは「対人」の場面。相手との違いがわかると、共感はできなくても、理解はできるようになります。</p>
+    </div>
+    <dl style="margin:0">
+      <div class="use"><dt>夫婦・パートナー</dt><dd>価値観も、コミュニケーションのタイプも違って当たり前。違いを知ることで、<b>関係が円滑に</b>なります。</dd></div>
+      <div class="use"><dt>子育て</dt><dd>学んでいる学問では、遺伝は10%と言われています。親の目線ではなく、<b>子ども自身の宿命</b>から関わり方を考えます。</dd></div>
+      <div class="use"><dt>仕事・営業</dt><dd>営業、コーチング、日々のコミュニケーション。相手を知るための<b>判断基準のひとつ</b>として使えます。</dd></div>
+      <div class="use"><dt>自分のこと</dt><dd>「見返りを求めてはいけない」と思い込んでいませんか。<b>見返りが必要な星</b>もあります。本当に欲しいものが見えると、世界が広がります。</dd></div>
+      <div class="use"><dt>うまくいかない時期</dt><dd>ここ数か月いいことがない。そんなときこそ、出来事の<b>捉え方を変える</b>手がかりになります。</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="profile" class="sec profile" aria-labelledby="prof-title">
+  <div class="wrap prof-grid">
+    <figure class="prof-photo reveal">
+      <img src="img/shimizu-820.jpg" alt="身振りを交えて語る清水先生" width="1080" height="1240" loading="lazy">
+      <div class="tiles" data-tiles style="--cols:5;--rows:6"></div>
+    </figure>
+    <div>
+      <h2 id="prof-title" class="prof-name">清水先生</h2>
+      <p class="prof-role">算命学で強みを発掘するプロデューサー</p>
+      <div class="prof-text">
+        <p>さまざまな仕事に必死で向き合っていた頃、目標設定の合宿で師匠と出会い、自分の算命学を見てもらったことがきっかけでこの道へ。「数字や結果よりも、誰のために、何のためにやるのかが原動力になる星」と言われ、目標を立て直したら驚くほどクリーンに進んだ。その体験が原点です。</p>
+        <p>師匠の教えを学び、体験し、実践を重ねてきました。「しゃべることが得意なわけではない」からこそ、教わった通りにやれば届く、再現性の高い伝え方を大切にしています。</p>
+      </div>
+      <dl class="facts">
+        <dt>学んだ道</dt><dd>師匠のもとで算命学を学び、実践</dd>
+        <dt>鑑定の型</dt><dd>本人の星は“体験型”。場数を重ねるほど磨かれる</dd>
+        <dt>家族</dt><dd>妻と、4人の子どもの父</dd>
+        <dt>受付</dt><dd>口コミ・ご紹介のみ</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="terms-title">
+  <div class="wrap">
+    <h2 id="terms-title" class="h2">鑑定の内容と、<br><span class="g">大切にしていること</span>。</h2>
+    <div class="terms">
+      <div class="term">
+        <h3>鑑定の内容</h3>
+        <dl>
+          <dt>内容</dt><dd>算命学による個人鑑定（才能の種・時期の捉え方・人間関係）</dd>
+          <dt>形式</dt><dd class="tbd">準備中</dd>
+          <dt>所要時間</dt><dd class="tbd">準備中</dd>
+          <dt>料金</dt><dd class="tbd">準備中</dd>
+          <dt>受付</dt><dd>口コミ・ご紹介のみ</dd>
+        </dl>
+      </div>
+      <div class="term">
+        <h3>算命学との付き合い方</h3>
+        <ul>
+          <li>算命学は盲信するものではありません。ひとつの<b>判断基準</b>としてお使いください。</li>
+          <li>「悪い時期」と言われて終わりにはしません。大切なのは<b>捉え方</b>と、より良くしていくことです。</li>
+          <li>鑑定直後にピンとこなくても大丈夫。種を知ると行動が変わり、後から「やっぱりそうだった」と気づく方がたくさんいます。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close dots" aria-labelledby="close-title">
+  <div class="wrap">
+    <div class="seal-big" aria-hidden="true">紹介<br>制</div>
+    <h2 id="close-title">鑑定は、<br>バトンで手渡しています。</h2>
+    <p class="lead">清水先生の鑑定は現在、口コミと、本当にいいと思ってくださった方からのご紹介だけで受け付けています。ひとりひとりに向き合う時間を守るためです。</p>
+    <ol class="baton">
+      <li><b><span>一</span>紹介者に伝える</b><p>清水先生を教えてくれた方に「鑑定を受けてみたい」と伝えてください。</p></li>
+      <li><b><span>二</span>バトンが先生へ</b><p>紹介者から清水先生にお繋ぎします。</p></li>
+      <li><b><span>三</span>日程を決めて鑑定へ</b><p>清水先生から直接ご連絡し、日程を調整します。</p></li>
+    </ol>
+    <div class="close-act">
+      <a class="btn" href="#close" aria-disabled="true" role="link" tabindex="-1">紹介者経由で相談する</a>
+      <small>相談窓口は近日公開します</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>清水先生の算命学鑑定</span>
+    <span>受付：口コミ・ご紹介のみ</span>
+  </div>
+</footer>
+
+<script>
+(()=>{
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const K='甲乙丙丁戊己庚辛壬癸',S='子丑寅卯辰巳午未申酉戌亥';
+const TC=['戌亥','申酉','午未','辰巳','寅卯','子丑'];
+const gz=i=>K[i%10]+S[i%12];
+
+/* nav backdrop after hero */
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>innerHeight*.5);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* tile overlays: the sixty-stem board flips away to reveal the photo */
+document.querySelectorAll('[data-tiles]').forEach(t=>{
+  const cs=getComputedStyle(t),c=+cs.getPropertyValue('--cols'),r=+cs.getPropertyValue('--rows');
+  const start=Math.floor(Math.random()*60);
+  for(let i=0;i<c*r;i++){
+    const el=document.createElement('i');
+    el.textContent=gz((start+i)%60);
+    el.style.setProperty('--d',Math.round(Math.random()*650+((i%c)/c)*350)+'ms');
+    t.appendChild(el);
+  }
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach(el=>reduce?el.classList.add('revealed'):io.observe(el));
+
+/* statement: phrases come into focus */
+const st=document.querySelector('.words');
+if(st){
+  const wrapText=node=>{
+    [...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){
+        const frag=document.createDocumentFragment();
+        n.textContent.split(/(?<=[、。])/).forEach(part=>{if(!part)return;const s=document.createElement('span');s.className='word';s.textContent=part;frag.appendChild(s)});
+        n.replaceWith(frag);
+      }else if(n.nodeType===1&&!n.classList.contains('word'))wrapText(n);
+    });
+  };
+  wrapText(st);
+  st.querySelectorAll('.word').forEach((w,i)=>w.style.setProperty('--d',i*110+'ms'));
+  if(reduce)st.classList.add('lit');
+  else new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){st.classList.add('lit');o.disconnect()}}),{threshold:.35}).observe(st);
+}
+
+/* sixty-stem board */
+const board=document.getElementById('board');
+const cells=[],tcs=[];
+for(let r=0;r<6;r++){
+  for(let c=0;c<10;c++){
+    const i=r*10+c,el=document.createElement('span');
+    el.className='k';el.innerHTML=`<b>${K[i%10]}</b><b>${S[i%12]}</b>`;el.style.setProperty('--d',(r*60+c*35)+'ms');
+    board.appendChild(el);cells.push(el);
+  }
+  const t=document.createElement('span');t.className='tc';t.textContent=TC[r]+'天中殺';board.appendChild(t);tcs.push(t);
+}
+
+/* date selects */
+const yS=document.getElementById('y'),mS=document.getElementById('m'),dS=document.getElementById('d');
+const opt=(s,v,l,sel)=>{const o=document.createElement('option');o.value=v;o.textContent=l;if(sel)o.selected=true;s.appendChild(o)};
+const now=new Date();
+opt(yS,'','—',true);for(let y=now.getFullYear();y>=1926;y--)opt(yS,y,y);
+opt(mS,'','—',true);for(let m=1;m<=12;m++)opt(mS,m,m);
+const fillDays=()=>{
+  const y=+yS.value||2000,m=+mS.value||1,keep=+dS.value,max=new Date(y,m,0).getDate();
+  dS.innerHTML='';opt(dS,'','—',!keep||keep>max);
+  for(let d=1;d<=max;d++)opt(dS,d,d,keep===d);
+};
+yS.addEventListener('change',fillDays);mS.addEventListener('change',fillDays);fillDays();
+
+/* ten day-stems (日干) */
+const T={
+ 甲:{n:'大樹',t:'まっすぐ伸びる、大樹の人',s:'空に向かってまっすぐ伸びる大きな木の星',seed:'曲がらない信念と、上へ伸びようとする向上心。一度決めたことをやり抜く力があり、周りから自然と頼られる存在になりやすい人です。',water:'目指す方向をはっきり言葉にすること。根を張る場所が決まると、ぐんと伸びます。'},
+ 乙:{n:'草花',t:'しなやかに根を張る、草花の人',s:'風にしなりながらも折れない草花の星',seed:'周りに合わせる柔らかさと、環境が変わっても根を張り直せる粘り強さ。人と人をつなぐ協調性が光ります。',water:'信頼できる人のそばに身を置くこと。支えがあるほど、遠くまで伸びていけます。'},
+ 丙:{n:'太陽',t:'まわりを照らす、太陽の人',s:'分けへだてなく光を届ける太陽の星',seed:'明るさと、隠しごとのないオープンさ。そこにいるだけで場が温まり、人を元気づける表現力を持っています。',water:'人前に出る機会を自分から増やすこと。照らす相手がいるほど輝きます。'},
+ 丁:{n:'灯火',t:'一点を照らす、灯火の人',s:'暗がりを静かに照らすともしびの星',seed:'内に秘めた情熱と、物事の本質を見抜く洞察力。ひとつのことに深く集中し、人の心にも細やかに火を灯せる人です。',water:'夢中になれるテーマを一つ選ぶこと。照らす先が定まると、炎は強くなります。'},
+ 戊:{n:'山',t:'どっしり構える、山の人',s:'動かず、すべてを受けとめる山の星',seed:'揺るがない安定感と包容力。人や物事を受けとめ、時間をかけて信頼を積み上げていく力があります。',water:'焦らず、長く続けられることに腰を据えること。積み重ねが山を高くします。'},
+ 己:{n:'大地',t:'育てる力を持つ、大地の人',s:'種を受け入れ、実りへと育てる田畑の星',seed:'人や物事を育てる力と、面倒見のよさ。コツコツ積み上げることで、周りに実りをもたらせる人です。',water:'誰かを育てる役割を引き受けること。育てるほど、自分の土も豊かになります。'},
+ 庚:{n:'鉄',t:'鍛えられて強くなる、鉄の人',s:'打たれるほど強くなる鉄・剣の星',seed:'決断力と行動力、困難に向かっていく勇ましさ。壁にぶつかるたびに鍛えられ、強さを増していく人です。',water:'少し難しい挑戦を自分に課すこと。鍛える場があるほど、刃は鋭くなります。'},
+ 辛:{n:'宝石',t:'磨かれて輝く、宝石の人',s:'磨かれるほど光を放つ宝石の星',seed:'繊細な美意識と、品のあるこだわり。感受性が豊かで、自分を磨き続けることで唯一無二の輝きを放つ人です。',water:'質の高いものや人に触れること。いい環境で磨かれるほど、光が増します。'},
+ 壬:{n:'海',t:'スケールの大きい、海の人',s:'すべてを流し込み、どこまでも広がる海の星',seed:'型にはまらない自由さと、物事を大きくとらえる知性。流れを読み、たくさんの人や情報を受け入れる器があります。',water:'行ったことのない場所や新しい知識に触れること。流れがあるほど、海は澄みます。'},
+ 癸:{n:'雨露',t:'静かに潤す、雨露の人',s:'大地にしみ込み、命を潤す雨の星',seed:'思慮深さと、さりげない優しさ。人の気持ちを汲み取り、知恵で周りを支えることができる人です。',water:'考えたことを、身近な人のために使ってみること。潤した先から、芽が出ます。'}
+};
+
+const form=document.getElementById('diagForm'),err=document.getElementById('err'),res=document.getElementById('result');
+const $=id=>document.getElementById(id);
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const y=+yS.value,m=+mS.value,d=+dS.value;
+  if(!y||!m||!d){err.textContent='生まれた年・月・日をすべて選んでください。';return}
+  if(new Date(y,m-1,d)>now){err.textContent='未来の日付は選べません。日付を確認してください。';return}
+  err.textContent='';
+  /* day pillar: 1900-01-01 = 甲戌 (index 10) */
+  const days=Math.round((Date.UTC(y,m-1,d)-Date.UTC(1900,0,1))/864e5);
+  const di=((10+days)%60+60)%60;
+  /* year pillar switches at 立春 (approx. Feb 4) */
+  const yy=(m<2||(m===2&&d<4))?y-1:y;
+  const yi=((yy-4)%60+60)%60;
+  const stem=K[di%10],info=T[stem],row=Math.floor(di/10),pair=TC[row];
+  const pb=[S.indexOf(pair[0]),S.indexOf(pair[1])];
+  const cy=(now.getMonth()<1||(now.getMonth()===1&&now.getDate()<4))?now.getFullYear()-1:now.getFullYear();
+  const list=[];for(let yr=cy;list.length<4&&yr<cy+30;yr++){if(pb.includes(((yr-4)%12+12)%12))list.push(yr)}
+  const inNow=list[0]===cy;
+
+  cells.forEach(c=>c.classList.remove('me','row-on'));tcs.forEach(t=>t.classList.remove('row-on'));
+  board.classList.remove('scan');void board.offsetWidth;
+  if(!reduce)board.classList.add('scan');
+  setTimeout(()=>{
+    for(let c=0;c<10;c++)cells[row*10+c].classList.add('row-on');
+    tcs[row].classList.add('row-on');cells[di].classList.add('me');
+  },reduce?0:900);
+
+  $('rGlyph').textContent=stem;
+  $('rTitle').textContent=info.t;
+  $('rSub').textContent=`本質の星は「${stem}（${info.n}）」。${info.s}を持って生まれています。`;
+  $('rYear').textContent=gz(yi);$('rDay').textContent=gz(di);$('rStem').textContent=stem;
+  $('rSeed').textContent=info.seed;$('rWater').textContent=info.water;
+  $('rTcTitle').innerHTML=`あなたは<span class="g">${pair}天中殺</span>。<br>${pair[0]}と${pair[1]}の年が<wbr>“裏の時期”です。`;
+  $('rYears').innerHTML=list.map(yr=>`<span class="${yr===cy?'now':''}">${yr}年 ${gz(((yr-4)%60+60)%60)}${yr===cy?'（いま）':''}</span>`).join('');
+  $('rTcNow').textContent=inNow?'ちょうど今年が天中殺の年にあたります。うまくいかないことが続いていても、それはあなたのせいではなく、裏の自分が顔を出している時期かもしれません。':`次の天中殺は${list[0]}年から（年の区切りは2月4日ごろの立春）。今のうちに、表の自分でできることを積み重ねておくのもひとつの過ごし方です。`;
+  res.classList.add('on');
+  setTimeout(()=>res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}),reduce?0:1400);
+});
+
+/* clips */
+document.querySelectorAll('.clip').forEach(c=>{
+  const v=c.querySelector('video'),b=c.querySelector('button');
+  b.addEventListener('click',()=>{c.classList.add('playing');v.controls=true;v.play()});
+  v.addEventListener('play',()=>document.querySelectorAll('.clip video').forEach(o=>{if(o!==v)o.pause()}));
+});
+})();
+</script>
+</body>
+</html>
